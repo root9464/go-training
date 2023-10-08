@@ -19,7 +19,7 @@ func main() {
 
 func createFile(a, b int) {
 	for i := a; i <= b; i++ {
-		path := "dir" + strconv.Itoa(i)
+		path := "go.dir" + strconv.Itoa(i)
 		filename := filepath.Join(path, strconv.Itoa(i)+".go")
 		os.Mkdir(path, os.ModeDir|0755)
 
@@ -35,5 +35,5 @@ func createFile(a, b int) {
 }
 
 func main() {
-	createFile(2, 3)
+	createFile(1, 5)
 }
