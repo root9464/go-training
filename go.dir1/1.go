@@ -86,3 +86,60 @@
 // 	fmt.Println(arr())
 
 // }
+
+//срезы
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	var nested = [4][]int{
+// 		{1, 2, 3, 4, 5},
+// 		{6, 7, 8, 9, 10},
+// 		{11, 12, 13, 13, 15},
+// 	}
+// 	fmt.Println(nested)
+// }
+
+// рандомный срез рандомного массива
+// package main
+
+// import (
+// 	"fmt"
+// 	"math/rand"
+// )
+
+// func main() {
+// 	array := []int32{}
+
+// 	for i := 0; i <= 10; i++ {
+// 		array = append(array, rand.Int31()*2)
+// 	}
+// 	subSclice := array[2:]
+// 	fmt.Println(array)
+// 	fmt.Println(subSclice)
+// }
+
+// package main
+
+// import "fmt"
+
+// func main() {
+// 	n := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+// 	n1 := n[:6]
+// 	n2 := n[3:8]
+// 	n3 := n[4:10]
+
+// 	fmt.Println(n1, len(n1), cap(n1)) // => [1 2 3 4 5 6]  6 10
+// 	fmt.Println(n2, len(n2), cap(n2)) // => [4 5 6 7 8]  5 7
+// 	fmt.Println(n3, len(n3), cap(n3)) // => [5 6 7 8 9 10] 6 6
+
+// 	// change n1 at index 4 to 15
+// 	n1[4] = 15
+
+// 	fmt.Println(n)  // => [1 2 3 4 15 6 7 8 9 10]
+// 	fmt.Println(n1) // => [1 2 3 4 15 6]
+// 	fmt.Println(n2) // => [4 15 6 7 8]
+// 	fmt.Println(n3) // => [15 6 7 8 9 10]
+
+// }
