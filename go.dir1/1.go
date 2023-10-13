@@ -38,6 +38,34 @@
 //_______задания с массивами_________
 
 // заполнить массив рандомными числами
+// ______примитивный метод______
+
+// package main
+
+// import (
+// 	"fmt"
+// 	"math/rand"
+// )
+
+// func random(n int) []int {
+
+// 	//создание массива по сгенерированному числа randomInt
+// 	array := rand.Perm(n)
+
+// 	return array
+// }
+
+// func main() {
+
+// 	min, max := 10, 50 // диапазон генерации числа
+// 	//генерация числа
+// 	randomInt := rand.Intn(max-min) + min
+// 	a := random(randomInt)
+// 	fmt.Println(a)
+// }
+
+//______ более изощренные методы ______
+
 // package main
 
 // import (
@@ -142,4 +170,67 @@
 // 	fmt.Println(n2) // => [4 15 6 7 8]
 // 	fmt.Println(n3) // => [15 6 7 8 9 10]
 
+// }
+
+// заполнить массив рандомными числами с рандомной длиной и отсортировать его
+// package main
+
+// import (
+// 	"fmt"
+// 	"math/rand"
+// 	"sort"
+// )
+
+// func randomArr(min, max int) []int {
+// 	count := rand.Intn(max-min) + min
+// 	// генерация рандомного массива
+// 	array := rand.Perm(count)
+// 	fmt.Println(array) // вывод
+// 	//сортировка массива
+// 	sort.Ints(array)
+// 	return array
+// }
+// func main() {
+// 	t := randomArr(5, 8)
+
+// 	fmt.Println(t)
+// }
+
+// создать массив с рандомными числами и отсортировать его вставкой
+// package main
+
+// import (
+// 	"fmt"
+// 	"math/rand"
+// )
+
+// func randArr(min, max int) []int {
+// 	count := rand.Intn(max-min) + min
+// 	array := rand.Perm(count)
+// 	return array
+// }
+
+// // сортировка вставкой
+// func pushsorted(array []int) []int {
+// 	length := len(array)
+
+// 	for i := 0; i < length; i++ {
+// 		j := i
+
+// 		for j > 0 {
+// 			if array[j-1] > array[j] {
+// 				array[j-1], array[j] = array[j], array[j-1]
+
+// 			}
+// 			j = j - 1
+// 		}
+// 	}
+// 	return array
+// }
+
+// func main() {
+// 	a := randArr(5, 10)
+// 	fmt.Println(a)
+// 	b := pushsorted(a)
+// 	fmt.Println(b)
 // }
