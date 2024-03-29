@@ -3,22 +3,6 @@
 
 package main
 
-// func capitalize(name string) (string, error) {
-// 	if name == "" {
-// 		return "", errors.New("no name provided")
-// 	}
-// 	return strings.ToTitle(name), nil
-// }
-
-// func main() {
-// 	_, err := capitalize("e")
-// 	if err != nil {
-// 		fmt.Println("Could not capitalize:", err)
-// 		return
-// 	}
-// 	fmt.Println("Success!")
-// }
-
 // func printNumbers() {
 // 	for i := 1; i <= 5; i++ {
 // 		time.Sleep(500 * time.Millisecond)
