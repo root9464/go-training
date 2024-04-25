@@ -14,9 +14,10 @@ func main() {
 
 func Atomic() {
 	var (
-		wg      sync.WaitGroup
 		counter int64
+		wg      sync.WaitGroup
 	)
+
 	wg.Add(1000)
 	for i := 0; i < 1000; i++ {
 		go func() {
