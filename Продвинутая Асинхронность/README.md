@@ -74,3 +74,6 @@ func ChanMutex() {
 ```
 
 > Канальная мьютексная функция  увеличивающа внутренний counter на еденицу. `(Время выполнения 518.9µs)`
+
+
+> [Дополнительная статься](https://dev.to/karanpratapsingh/advanced-concurrency-patterns-in-go-2je1)
